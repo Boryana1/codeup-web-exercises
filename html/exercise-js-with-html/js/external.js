@@ -14,11 +14,16 @@
 // var TotalCost = [(userInput * mp) + (userInput1 * mp) + (userInput2 * mp)];
 // alert('Your total coat is: $' + TotalCost);
 
-var Google =  prompt("How many hours have you worked for Google?");
-var Amazon = prompt("How many hours have you worked for Amazon?");
-var Facebook = prompt("How many hours have you worked for Facebook?");
-var pay1 = '400';
-var pay2 = '380';
-var pay3 = '350';
-var totalPay = [(Google * pay1) + (Amazon * pay2) + (Facebook * pay3)];
-alert(totalPay);
+// var Google =  prompt("How many hours have you worked for Google?");
+// var Amazon = prompt("How many hours have you worked for Amazon?");
+// var Facebook = prompt("How many hours have you worked for Facebook?");
+// var pay1 = '400';
+// var pay2 = '380';
+// var pay3 = '350';
+// var totalPay = [(Google * pay1) + (Amazon * pay2) + (Facebook * pay3)];
+// alert(totalPay);
+
+var class = prompt('Is your class full?');
+var schedule = prompt('Is your schedule full?');
+var good2go = class&&schedule
+alert(good2go)
