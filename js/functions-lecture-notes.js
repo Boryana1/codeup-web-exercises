@@ -22,5 +22,11 @@ function firstNameAge (){
     var firstName = 'Boryana ';
     var age = "29";
     console.log(firstName + age)
-}
+};
 firstNameAge();
+
+function doMathThing(){
+    //code lives here
+    return 4 + 8 * 5;
+};
+console.log(doMathThing());
