@@ -14,7 +14,7 @@ function sayHello(name){
     return 'hello+name;
 }
 
-console.log(sayHello(name));;
+console.log(sayHello(name));
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -118,6 +118,6 @@ alert("You should tip $" + calculateTip());
 function applyDiscount(originalPrice, discountPercent){
     var originalPrice;
     var discountPercent;
-    return originalPrice * discountPercent;
+    return originalPrice - (originalPrice * discountPercent);
 }
 console.log(applyDiscount(100,0.2));
