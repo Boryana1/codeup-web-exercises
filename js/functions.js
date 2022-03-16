@@ -120,4 +120,4 @@ function applyDiscount(originalPrice, discountPercent){
     var discountPercent;
     return originalPrice * discountPercent;
 }
-console.log(applyDiscount(100,20));
+console.log(applyDiscount(100,0.2));
