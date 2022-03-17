@@ -129,7 +129,7 @@
 //     }
 //         return ogPrice - (ogPrice*luckyNum)
 // }
-// console.log(calculateTotal(4,200));
+// console.log(calculateTotal(2,200));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -182,13 +182,34 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-var oddOrEven;
 var number = confirm("Would you like to enter a number?");
-oddOrEven = prompt("Enter a number");
-if (oddOrEven % 2 == 0) {
-    console.log(oddOrEven = `Your number is even.`);
+if (number) {
+    var userInput = prompt("Enter a number");
 } else {
-    console.log(oddOrEven ='Your number is odd.');
+    alert("User did not want to enter a number.");
 }
-alert(oddOrEven);
-alert(oddOrEven)
+function enteredNumber (oddOrEven) {
+    if (number === true && number % 2 == 0) {
+        alert(`Your number is even.`);
+    } else if (number === true && number % 2 === 1) {
+        alert('Your number is odd.');
+    } else {
+        alert("You entered an incorrect data type");
+    }
+}
+console.log(enteredNumber(userInput));
+
+if (number === true && (userInput <= 0 || userInput >= 0)) {
+    alert(userInput + " + 100 = " + (Number(userInput) + 100));
+} else {
+    alert("Incorrect input data type.");
+}
+
+if (userInput === true && userInput >= 0) {
+    alert(userInput + " is a positive number.")
+} else if (userInput === true && userInput < o){
+    alert(userInput + " is a negative number.")
+}
+
+
+
