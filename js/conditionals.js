@@ -182,11 +182,13 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-confirm("Would you like to enter a number?");
-function number(chosen) {
-    prompt("Enter a number");
-if (number % 2 == 0) {
-    alert("Your number is even.");
+var oddOrEven;
+var number = confirm("Would you like to enter a number?");
+oddOrEven = prompt("Enter a number");
+if (oddOrEven % 2 == 0) {
+    console.log(oddOrEven = `Your number is even.`);
 } else {
-    alert("Your number is odd.");
+    console.log(oddOrEven ='Your number is odd.');
 }
+alert(oddOrEven);
+alert(oddOrEven)
