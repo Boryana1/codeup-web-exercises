@@ -21,15 +21,15 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor(color) {
-    if (color.toUpperCase() === "BLUE") {
-        return "Blue is the color of the sky";
-    }
-    if (color.toUpperCase() === "RED") {
-        return "Strawberries are red";
-    }
-    return "I don't know anything about " + color;
-}
+// function analyzeColor(color) {
+//     if (color.toUpperCase() === "BLUE") {
+//         return "Blue is the color of the sky";
+//     }
+//     if (color.toUpperCase() === "RED") {
+//         return "Strawberries are red";
+//     }
+//     return "I don't know anything about " + color;
+// }
 
 // console.log(analyzeColor("blue"));
 
@@ -38,8 +38,8 @@ function analyzeColor(color) {
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
@@ -55,11 +55,29 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //         return "I don't know anything about " + color
 //     }
 // }
-console.log(analyzeColor(randomColor));
+// console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+// function analyzeColor(color) {
+//     var result;
+//     switch (color.toUpperCase()) {
+//         case "BLUE":
+//             result = "Blue is the color of the sky";
+//             break;
+//         case "RED":
+//             result = "Strawberries are red";
+//             break;
+//         default:
+//             result = color + " is my favorite color too!";
+//             break;
+//     }
+//     return result
+// }
+//
+// console.log(analyzeColor("violet"));
+
 // var color = prompt("What is your favorite color?");
 // switch (color) {
 //     case "blue":
@@ -79,8 +97,8 @@ console.log(analyzeColor(randomColor));
  * function to show it to the user.
  */
 // var input = prompt("What color is your car?")
-// function analizeColor(color){
-//     if (color === "blue") {
+// function analyzeColor(color){
+//     if (color.toUpperCase === "blue") {
 //         return "Blue is the color of the sky"
 //     } else if (color === "red") {
 //         return "Strawberries are red"
@@ -88,7 +106,7 @@ console.log(analyzeColor(randomColor));
 //         return "I don't know anything about " + color
 //     }
 // }
-// alert(analizeColor(input));
+// alert(analyzeColor(input));
 
 
 /* ########################################################################## */
@@ -112,6 +130,8 @@ console.log(analyzeColor(randomColor));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+// var totalPrice = prompt("What is your total bill?")
+//
 // function calculateTotal(luckyNum, ogPrice){
 //     if (luckyNum === 0) {
 //          return ogPrice;
@@ -139,8 +159,7 @@ console.log(analyzeColor(randomColor));
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-// var total = prompt("What is your total bill?")
-// // var ogPrice = total;
+// var ogPrice = prompt("What is your total bill?")
 // function calculateTotal(luckyNum, ogPrice){
 //     if (luckyNum === 0) {
 //         return ogPrice;
@@ -157,7 +176,8 @@ console.log(analyzeColor(randomColor));
 //     }
 //     return ogPrice - (ogPrice*luckyNum)
 // }
-// console.log(calculateTotal());
+// console.log(luckyNumber);
+// console.log(calculateTotal(luckyNumber, totalPrice));
 // alert("Your lucky number is " + luckyNumber);
 // alert("Your total before the discount was $" + total);
 // alert("Your total AFTER the discount is $" + (calculateTotal(luckyNumber, total).toFixed()));
@@ -181,6 +201,39 @@ console.log(analyzeColor(randomColor));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+function enterNumber() {
+    var isConfirmed = confirm("Do you want to enter a number?");
+    if (isConfirmed) {
+        var userInput = prompt("Enter a number");
+        if ( isNaN(Number(userInput))) {
+            alert("You entered an incorrect data type");
+            return;
+        }
+        if (userInput % 2 === 0) {
+            alert(`Your number is even.`);
+        } else {
+            alert('Your number is odd.');
+        }
+        alert (userInput + " + 100 = " + (Number(userInput) + 100));
+        if (userInput >= 0) {
+            alert(userInput + " is a positive number.");
+        } else if (userInput < 0) {
+            alert(userInput + " is a negative number.");
+        }
+    } else {
+        alert("User did not want to enter a number.");
+    }
+
+}
+
+enterNumber();
+
+
+
+
+
+
 // var number = confirm("Would you like to enter a number?");
 // if (number) {
 //     var userInput = prompt("Enter a number");
@@ -204,11 +257,7 @@ console.log(analyzeColor(randomColor));
 //     alert("Incorrect input data type.");
 // }
 //
-// if (number === true && userInput >= 0) {
-//     alert(userInput + " is a positive number.");
-// } else if (number === true && userInput < 0){
-//     alert(userInput + " is a negative number.");
-// }
+
 
 
 
