@@ -14,12 +14,12 @@
 //     }
 // }
 
-for(var i=1; i<=9; i++){
-    var Num='';
-    for(var j=0; j<i; j++){
-        Num += i;
-    }
-    console.log(Num) }
+// for(var i=1; i<=9; i++){
+//     var Num='';
+//     for(var j=0; j<i; j++){
+//         Num += i;
+//     }
+//     console.log(Num) }
 
 // for (let i = 1; i < 10; i++) {
 //     let string = "";
@@ -57,6 +57,6 @@ for(var i=1; i<=9; i++){
 //     }
 // }
 
-for (i = 100; i >= 0; i-=5) {
-    console.log(i);
-}
+// for (i = 100; i >= 0; i-=5) {
+//     console.log(i);
+// }
