@@ -196,6 +196,18 @@
      *      ...
      */
 
+    //EXTRA:
+    //function Book(type, author) {
+    //     this.type = type;
+    //     this.author = author;
+    //     this.getDetails = function () {
+    //         return this.type + " written by " + this.author;
+    //     }
+    // }
+    //
+    // var book = new Book("Fiction", "Peter King");
+    //
+    // console.log(book.getDetails());        // => Fiction written by Peter King
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
