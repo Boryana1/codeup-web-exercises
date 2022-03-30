@@ -35,4 +35,27 @@ randomArrayShuffle(input);
 
 
 
-QUESTION: WHY MY INPUT DOES NOT CHANGE THE FIRST TIME I RUN THE CODE????
+// QUESTION: WHY MY INPUT DOES NOT CHANGE THE FIRST TIME I RUN THE CODE????
+//
+
+// 1. Return a string in reverse
+// ex. reverseString(‘hello’) === ‘olleh’
+// let reverseString = (str) => {
+//     return //Something
+// };
+
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+reverseString("hello");
+
+// 2. Return true if palindrome and false if not
+//     ex. isPalindrome(‘racecar’) === ‘true’, isPalindrome(‘hello’) == false
+// let isPalindrome = (str) => {
+// };
+
+function isPalindrome(x) {
+    if
+}
+
+
