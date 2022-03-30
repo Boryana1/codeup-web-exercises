@@ -140,38 +140,35 @@
      */
 
     var books = [
-    {
-        title: "Gorgeous Lies",
-            author:{
-            firstName: "Martha", lastName
-        :
-            "McPhee",
-        }
-    }
-
-        title: "The Winemaker's Wife",
-    {
-        firstName: "Kristin",
-        lastName: "Harmel",
-    }
-
-        title: "The Dinner List",
-            { 
-                firstName:"Rebecca",
-                lastName: "Serle",
-            }
-
-        title: "Normal People",
-            {firstName: "Sally",
-                lastName: "Rooney",
-            }
-
-        title: "The Family Upstairs",
-            {
-                firstName: "Lisa",
-                lastName: "Jewell",
-            }
-    ]
+        {
+            title: "Gorgeous Lies",
+            author: {
+                    firstName: "Martha",
+                    lastName: "McPhee"}},
+        {
+            title: "The Winemaker's Wife",
+            author: {
+                    firstName: "Kristin",
+                    lastName: "Harmel"}},
+        {
+            title: "The Dinner List",
+            author: {
+                    firstName: "Rebecca",
+                     lastName: "Serle"}},
+        {
+            title: "Normal People",
+            author: {
+                    firstName: "Sally",
+                    lastName: "Rooney"}},
+        {
+            title: "The Family Upstairs",
+            author: {
+                    firstName: "Lisa",
+                    lastName: "Jewell"}}
+];
+    console.log(books[0].title);
+    console.log(books[0].author.firstName);
+    console.log(books[0].author.lastName);
     // console.log(book.title+ "is number "+ books.indexOf(book))
 
     /**
