@@ -2,3 +2,57 @@
     color: turquoise; /* single line comment */
     text-decoration: underline;
 }
+#main-header {
+    text-align: center;
+}
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: lightcyan;
+    background-size:cover;
+    /*background-image: url("https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")*/
+    background: url("https://assets.codepen.io/6093409/river.mp4");
+    background-size: cover;
+}
+
+ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+ul {
+    list-style-type: square;
+}
+
+th{
+    font-size: 25px;
+    padding-right: 20px;
+}
+
+td {
+    font-size: 15px;
+    padding-right: 20px;
+}
+
+
+a:active {
+    color: orchid;
+}
+a:link {
+    color: navy;
+}
+a:hover {
+    background-color: cornflowerblue;
+}
+a {
+    background-color: navy;
+}
+a:visited {
+    background-color: lightsalmon;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
