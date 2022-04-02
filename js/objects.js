@@ -195,6 +195,12 @@
      *      ---
      *      ...
      */
+    for(let i = 0; i < books.length; i++) {
+        console.log("Book # " + i);
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+        console.log("----")
+    }
 
     //EXTRA:
     //function Book(type, author) {
@@ -218,5 +224,7 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+function createBook(title, author) {
 
+    }
 })();
