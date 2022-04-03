@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -31,7 +31,7 @@
     var person = {
         firstName: "Boryana",
         lastName: "Dimova",
-        sayHello: function() {
+        sayHello: function () {
             return "Hello from " + person.firstName + " " + person.lastName + "!";
         }
     }
@@ -61,15 +61,17 @@
         },
         {
             name: 'Ryan',
-            amount: 250},
+            amount: 250
+        },
         {
             name: 'George',
-            amount: 320}
-        ];
+            amount: 320
+        }
+    ];
 
-    shoppers.forEach(function(shopper){
+    shoppers.forEach(function (shopper) {
         console.log(shopper); // {name: 'Cameron', amount: 180} // {name: 'Ryan', amount: 250},
-        if(shopper.amount > 200){
+        if (shopper.amount > 200) {
             var discountedPrice = shopper.amount * .12;
             console.log(shopper.name + " has a total amount of: " + shopper.amount);
             console.log("You hava a discount of 12%")
@@ -140,32 +142,43 @@
      */
 
     var books = [
-        {
-            title: "Gorgeous Lies",
-            author: {
-                    firstName: "Martha",
-                    lastName: "McPhee"}},
+        createBook("Gorgeous Lies","Martha", "McPhee"),
+        // {
+        //     title: "Gorgeous Lies",
+        //     author: {
+        //         firstName: "Martha",
+        //         lastName: "McPhee"
+        //     }
+        // },
         {
             title: "The Winemaker's Wife",
             author: {
-                    firstName: "Kristin",
-                    lastName: "Harmel"}},
+                firstName: "Kristin",
+                lastName: "Harmel"
+            }
+        },
         {
             title: "The Dinner List",
             author: {
-                    firstName: "Rebecca",
-                     lastName: "Serle"}},
+                firstName: "Rebecca",
+                lastName: "Serle"
+            }
+        },
         {
             title: "Normal People",
             author: {
-                    firstName: "Sally",
-                    lastName: "Rooney"}},
+                firstName: "Sally",
+                lastName: "Rooney"
+            }
+        },
         {
             title: "The Family Upstairs",
             author: {
-                    firstName: "Lisa",
-                    lastName: "Jewell"}}
-];
+                firstName: "Lisa",
+                lastName: "Jewell"
+            }
+        }
+    ];
     console.log(books[0].title);
     console.log(books[0].author.firstName);
     console.log(books[0].author.lastName);
@@ -195,12 +208,7 @@
      *      ---
      *      ...
      */
-    for(let i = 0; i < books.length; i++) {
-        console.log("Book # " + i);
-        console.log("Title: " + books[i].title);
-        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
-        console.log("----")
-    }
+
 
     //EXTRA:
     //function Book(type, author) {
@@ -224,7 +232,24 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-function createBook(title, author) {
+    function createBook(title, authorFirstName, authorLastName) {
+        return {
+            title: title,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName
+            }
+        }
+    }
 
+    function showBookInfo(book) {
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("----")
+    }
+
+    for (let i = 0; i < books.length; i++) {
+        console.log("Book # " + i);
+        showBookInfo(books[i]);
     }
 })();
