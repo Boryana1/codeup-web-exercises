@@ -54,3 +54,42 @@ for (let i = 0; i < numbers.length ; i++) {
         console.log(false);
     }
 }
+
+//ADD UP ALL THE NUMBERS
+// example input: [1,2,3,4,5];
+// expected output: 15
+// some possible test cases to think about:
+//     function should be called ‘sumArr’
+// function should return a number
+// function should accept an array
+// function should return “sum not available” if array is empty
+// function should handle non-numbers
+
+var array = [1, 2, 3, 4, 5];
+var sum = array.reduce(function(a, b){
+    return a + b;
+}, 0);
+
+console.log(sum);
+
+
+//ANOTHER WAY TO GET THE SUM:
+
+function sum(arr) {
+    let sum = 0;
+    for (const val of arr) {
+        sum += val;
+    }
+    return sum;
+}
+sum([1, 2, 3, 4, 5]);
+
+
+//ANOTHER WAY:
+
+function sum(arr) {
+    const reducer = (sum, val) => sum + val;
+    const initialValue = 0;
+    return arr.reduce(reducer, initialValue);
+}
+sum([1, 2, 3, 4, 5]);
