@@ -1,42 +1,16 @@
-/*Each nav-item should display inline block and have a padding of 1.5em. Use the class top-nav to make the navigation fixed,
- it also needs to use 100% of the width.
+/*Use the container to add some space between the avatar and the new 3 columns (2em).*/
 
-Your main navigation element should look like the following
+/*Let's continue with the media component.*/
 
-Twitter navigation
+/*The media selector should use 100% of the width of its container. Its background color should be light-bg. It should have*/
+/*a border at the bottom of 1px with color --separator-color. It must have a padding of .5em. Use the property overflow since*/
+/*it will contain only floating elements.*/
 
-Let's continue with the user's avatar and the Edit button positioning.
+/*The media-image maximum width should be 50px, and it should float. It must have a margin top of 1.33em.*/
 
-Use absolute positioning to center the avatar, you'll need to adjust the top value. Use the class profile-image for this purpose.
+/*The media-body should float too. Its width will be 100%. We need to use calc to subtract the width of the image.*/
 
-Give a height of 80px to the profile class. To which side should we float the .profile-form? One way to center text
-vertically is by changing its line-height. If it matches the height of the container the text will be centered vertically.
-Center the button inside the .profile-form element.
-
-The avatar and edit button should look like the following image
-
-Twitter avatar
-
-If you scroll down the page you'll notice that the avatar now appears on top of the main navigation. Fix this issue using z-index.
- Change the fixed top navigation z-index to 1000 or bigger. Does it work with a smaller value?
-
-profile-details, timeline, and who-to-follow should be floating elements. They should use 25%, 50% and 25% of the width respectively.
- These elements should have a margin of .5em to both sides (0 for top and bottom). Since we have a margin you will need to use calc
-  to subtract the margin to the percents of the width property.
-
-Use the container to add some space between the avatar and the new 3 columns (2em).
-
-Let's continue with the media component.
-
-The media selector should use 100% of the width of its container. Its background color should be light-bg. It should have
-a border at the bottom of 1px with color --separator-color. It must have a padding of .5em. Use the property overflow since
-it will contain only floating elements.
-
-The media-image maximum width should be 50px, and it should float. It must have a margin top of 1.33em.
-
-The media-body should float too. Its width will be 100%. We need to use calc to subtract the width of the image.
-
-Finally, remove the bullets and the padding from profile-items. Add a margin of .5em to the profile-entry class.*/
+/*Finally, remove the bullets and the padding from profile-items. Add a margin of .5em to the profile-entry class.*/
 
 :root {
     --main-bg: #E6ECF0;
@@ -115,5 +89,70 @@ nav li {
 }
 .top-nav {
     position: fixed;
+    z-index: 1000;
     width: 100%;
+}
+
+.profile-image {
+    position: absolute;
+    top: 250px;
+}
+
+.profile {
+    height: 80px;
+}
+
+.profile-form {
+    float: right;
+    line-height: 80px;
+}
+
+.profile-details {
+    float : left;
+    width: calc(25% - 1em);
+    margin: 0 0.5em;
+}
+
+.timeline {
+    float: left;
+    width: calc(50% - 1em);
+    margin: 0 0.5em;
+}
+
+.who-to-follow {
+    float: right;
+    width: calc(25% - 1em);
+    margin: 0 0.5em;
+}
+
+.container {
+    margin-top: 2em;
+}
+
+.media {
+    width: 100%;
+    background-color: #FFF;
+    border-bottom: 1px #DDD solid;
+    padding: .5em;
+    overflow: auto;
+}
+
+.media-image {
+    max-width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+
+.media-body {
+    float: left;
+    width: calc(100% - 50px);
+}
+
+.profile-items {
+    list-style-type: none;
+    padding: 0px;
+    margin:0;
+}
+.profile-entry {
+    margin: .5em;
 }

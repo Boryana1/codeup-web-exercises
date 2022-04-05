@@ -55,7 +55,7 @@ for (let i = 0; i < numbers.length ; i++) {
     }
 }
 
-//ADD UP ALL THE NUMBERS
+//05 APRIL EXERCISE // ADD UP ALL THE NUMBERS
 // example input: [1,2,3,4,5];
 // expected output: 15
 // some possible test cases to think about:
@@ -93,3 +93,19 @@ function sum(arr) {
     return arr.reduce(reducer, initialValue);
 }
 sum([1, 2, 3, 4, 5]);
+
+//ANOTHER WAY:
+
+var passedNumbers = [1,'2',3,4,5];
+var result = 0;
+function sumArr(input) {
+    input = passedNumbers.map(Number);
+    if (input === "") return "sum not available";
+    for (var i = 0; i < passedNumbers.length; i++) {
+        result += input[i];
+
+    } return result;
+}
+sumArr(passedNumbers);
+
+//https://stackoverflow.com/questions/1230233/how-to-find-the-sum-of-an-array-of-numbers
