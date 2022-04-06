@@ -5,12 +5,28 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-.message message-info {
-
+div {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 4px 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 1em 25em ;
 }
-.message message-success {
-
+.message-info {
+    color: darkblue;
+    background-color: lightblue;
 }
-.message message-warning{
-
+.message-success {
+    color: #024f02;
+    background-color: #b5f5b5;
+}
+.message-warning{
+    color: #eea405;
+    background-color: #efef9c;
+}
+.message-error {
+    color: darkred;
+    background-color: #f18484;
 }
