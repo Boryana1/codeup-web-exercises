@@ -128,3 +128,110 @@ sortArr.sort(function(a, b){return a-b});
 
 
 //if ( !(/[0-9]/.test(input))
+//EXERCISE FOR 7 AUG 2022
+// Write a function that accepts a string and returns a map with the strings character frequency.
+//     example input: [“b”, “a”, “n”, “a”, “n”, “a”];
+// expected output: { b: 1, a: 3, n: 2 }
+
+ var input = ["'b', 'a', 'n', 'a', 'n', 'a'"];
+
+function count (string) {
+    var count = {};
+    string.split('').forEach(function(s) {
+        count[s] ? count[s]++ : count[s] = 1;
+    });
+    return count;
+}
+ count(input)
+
+// 1. Make a function named isOdd(number)
+//
+function isOdd(number) {
+    if(number % 2 !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+// 2. Make a function named isEven(number)
+//
+function isEven(number) {
+    if(number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+// 3. Make a function named isMultipleOfFive(input)
+//
+function isMultipleOfFive(number) {
+    if(number % 5 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+// 4. Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
+//
+function isMultipleOf(target, n) {
+    if(target % n === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+// 5. Make a function named isVowel(letter)
+function isVowel(letter) {
+    if(letter.toString().toLowerCase() === 'a', 'e', 'y', 'o', 'u', 'i'){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//FROM THE SECOND ASSESSMENT:
+function multiplyBy2(input) {
+    var result = Number(input);
+    if ( !(/[0-9]/.test(input))) return false;
+    if(Number) return result * 2;
+}
+multiplyBy2("3");
+
+// 6. Write a function called first(input) that returns the first character in the provided string.
+//
+function first(input) {
+    return input[0];
+}
+// 7* Create a function that takes in two string inputs.
+// -- If the second string input is present in the first, return the first input string with the second input string
+// removed from it.
+// -- If the second string input is present multiple times in the first, the second string will only be removed
+// where it first occurs in the first string.
+// -- If the second string input is not present in the first, return the first string as entered in the function.
+//
+
+// 8. Make a function named isSpace(letter) that returns if a character is a space character
+//
+function isSpace(letter) {
+    if (letter === " ") {
+        return true;
+    } else {
+        return false;
+    }
+}
+// 9. Write a function named squareRoot(n) that returns the square root of the input
+//
+function squareRoot(n) {
+    return Math.sqrt(number);
+}
+// 10* create a function that will return how many whitespace characters are at the beginning of a string (hint: use regex).
+//
+// 11. Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+//
+// 12. Write a function named getRandomQuote().
+// //   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
+// //   getRandomQuote should generate a random number between 0 and the array's length minus 1
+// //   use the randomly generated number as your index
+// //   return a random quote.
+//
+// 13. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers
