@@ -222,12 +222,16 @@ function isSpace(letter) {
 // 9. Write a function named squareRoot(n) that returns the square root of the input
 //
 function squareRoot(n) {
-    return Math.sqrt(number);
+    return Math.sqrt(n);
 }
 // 10* create a function that will return how many whitespace characters are at the beginning of a string (hint: use regex).
 //
+
+function whitespaces()
 // 11. Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
 //
+
+
 // 12. Write a function named getRandomQuote().
 // //   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
 // //   getRandomQuote should generate a random number between 0 and the array's length minus 1
