@@ -239,3 +239,16 @@ function whitespaces()
 // //   return a random quote.
 //
 // 13. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers
+
+
+// Write the code necessary to output the first 50 prime numbers
+// Recommend starting your loop at 1 and ending your loop once you've calcualted 50 primes.
+// https://en.wikipedia.org/wiki/Prime_number
+
+for (let i = 1; i <= 50; i++) {
+    function primeNumber(num) {
+        if (num % num !== 0){
+            return num;
+        }
+    } console.log(num);
+}
