@@ -1,22 +1,60 @@
 /*The navbar must have the following:*/
 
-/*box-sizing: border-box for all elements*/
-/*link text, the logo, and icons are surrounded by anchor tags*/
-/*links turn blue on hover*/
-/*anchor tags are display: inline-block*/
-/*clickable area of links immediately flow from one link to the next (padding will help achieve this)*/
-/*Google Fonts used for logo and link text ("Montserrat" and "Work Sans", respectively)*/
-/*the "Logo" text is 3em with .2em of padding above and below*/
-/*  no explicit height given to the navbar*/
 /*  default styling is removed as needed from the body, unordered list and anchor tag elements*/
-/*logo is horizontally centered on the navbar (automatic margins will help achieve this)*/
+a {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 2em;
+    margin: -2em;
+}
+/*a:link, a:visited {*/
+/*    background-color: white;*/
+/*    color: black;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*}*/
+
+a:hover, a:active {
+    color: blue;
+}
 nav {
     display: flex;
     justify-content: space-between;
+    background-color: #848487;
+    align-items: center;
+}
+div{
+    box-sizing: border-box;
+}
+.left.side {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-weight: bold;
+    width: 25%;
+    word-spacing: 0.5em;
+    font-family: 'Work Sans', sans-serif;
 }
 img {
-    height: 20px;
+    height: 15px;
 }
-.left-side {
+.right.side {
+    display: flex;
     justify-content: space-evenly;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    width: 15%;
+    font-family: 'Work Sans', sans-serif;
+}
+.logo {
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    text: 3em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    margin: auto;
 }
