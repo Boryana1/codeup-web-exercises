@@ -46,14 +46,21 @@ function subtract(input1, input2) {
 // example input: [12,2,3,4,5,6,7,8,9]
 // expected output: [2,2,4,6,8]
 
-var numbers = [12,2,3,4,5,6,7,8,9];
-for (let i = 0; i < numbers.length ; i++) {
-    function if (i % 2 === 0) {
-    return i;
-    } else {
-        console.log(false);
+// var numbers = [12,2,3,4,5,6,7,8,9];
+// for (let i = 0; i < numbers.length; i++) {
+//      if (i % 2 === 0) {
+//     console.log(i);
+// }
+//      console.log(i.toString())
+
+function arrNum(i) {
+    var numbers = [12,2,3,4,5,6,7,8,9];
+    if (parseFloat(i) % 2 === 0) {
+        return i.join("");
     }
 }
+
+
 
 //05 APRIL EXERCISE // ADD UP ALL THE NUMBERS
 // example input: [1,2,3,4,5];
@@ -252,3 +259,13 @@ for (let i = 1; i <= 50; i++) {
         }
     } console.log(num);
 }
+
+// 13 April 2022
+// Write a function that takes two arrays as arguments
+// Merge both arrays and remove duplicate values
+// Sort the merge result in ascending order
+// Return the resulting array
+
+// example input: [1, 2, 3], [3, 4, 5]
+// expected output:
+//     [ 1, 2, 3, 4, 5 ]
