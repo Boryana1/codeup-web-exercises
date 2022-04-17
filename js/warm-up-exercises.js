@@ -46,19 +46,14 @@ function subtract(input1, input2) {
 // example input: [12,2,3,4,5,6,7,8,9]
 // expected output: [2,2,4,6,8]
 
-// var numbers = [12,2,3,4,5,6,7,8,9];
-// for (let i = 0; i < numbers.length; i++) {
-//      if (i % 2 === 0) {
-//     console.log(i);
-// }
-//      console.log(i.toString())
-
-function arrNum(i) {
-    var numbers = [12,2,3,4,5,6,7,8,9];
-    if (parseFloat(i) % 2 === 0) {
-        return i.join("");
+var numbers = [12,2,3,4,5,6,7,8,9];
+var array = []
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+        array.push(numbers[i]);
     }
 }
+console.log(array)
 
 
 
@@ -132,7 +127,26 @@ sumArr(passedNumbers);
 var sortArr = [5,8,2,6,9,3,2];
 sortArr.sort(function(a, b){return a-b});
 
+var input = [3, 'b', true, 4, 5, 8, 9, 'xyz'];
+// create new array with only the numbers of the input array
+var inputNew = []
+for(var i = 0; i < input.length; i++) {
+    if (typeof input[i] === 'number') {
+        inputNew.push(input[i])
+    }
+}
 
+// sort the only numbers array
+
+
+inputNew.sort(function(a, b){return a-b});
+console.log(inputNew)
+
+let uniqueChars = input.filter((c, index) => {
+    return input.indexOf(c) === index;
+});
+
+console.log(uniqueChars);
 
 //if ( !(/[0-9]/.test(input))
 //EXERCISE FOR 7 AUG 2022
