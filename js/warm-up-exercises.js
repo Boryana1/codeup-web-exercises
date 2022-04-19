@@ -313,3 +313,37 @@ for (let i = 20; i >= 0 ; i--) {
 
 var input1 = {a:1,b:2,c:3}
     console.log(Object.keys(input1));
+
+// 19 APR 2022
+//
+// (hint hint hint: learn how to use a modulus)
+// Write a function that iterates through numbers 1 and 15 and returns the numbers that are divisible by 3 (hint hint hint: learn how to use a modulus)
+for (let i = 1; i < 16; i++) {
+    if (i % 3 === 0){
+        console.log(i);
+    }
+}
+
+
+// 2. Extra Challenging - Set likely won’t be covered but it’s a useful tool in JS
+// Write a function that takes a Set and an array as arguments. If not already existing, add each element in the array to the Set. Return the modified Set
+//
+// example input: new Set([1, 2, 3]), [4, 5, 6]
+// expected output: new Set([1, 2, 3, 4, 5, 6 ])
+// -------------------------
+//     example input:new Set([1, 2, 3]), [2, 3]
+// expected output: new Set([1, 2, 3])
+// -------------------------
+newSet = ([1, 2, 3]);
+newArray = [2, 3];
+
+    function myArr(arr1, arr2) {
+        var result = arr1.concat(arr2);
+
+        result = [...new Set(result)];
+
+        return result.sort();
+    }
+console.log(myArr(newSet, newArray));
+    var myNewArray = myArr(newSet, newArray);
+    console.log(new Set(myNewArray))
