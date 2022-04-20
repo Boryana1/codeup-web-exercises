@@ -347,3 +347,44 @@ newArray = [2, 3];
 console.log(myArr(newSet, newArray));
     var myNewArray = myArr(newSet, newArray);
     console.log(new Set(myNewArray))
+
+//20 APR 2022
+//     (hint hint hint)
+// List the primitive data types in javascript
+//In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods.
+// There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol, and null.
+
+// 2. swap keys for values
+// Write a function that takes an object as argument
+// Swap the Javascript object's key with its values and return the resulting object
+//     example input: {z:'a',y:'b',x:'c',w:'d'}
+// expected output: {a:'z',b:'y',c:'x',d:'w'}
+// -------------------------
+//     example input:{2:'a',4:'b',6:'c',8:'d'}
+// expected output: {a:'2',b:'4',c:'6',d:'8'}
+// -------------------------
+
+//let person = {
+//     firstName: 'John',
+//     lastName: 'Doe'
+// };
+
+//The first step is to use the Object.entries method to get an array of the object's key-value pairs.
+//We use the Array.map method to swap the places of the key and the value in the arrays.
+//The Object.fromEntries method takes an array of key-value pairs, adds them to an object and returns the result.
+
+var input = {
+    z:'a',
+    y:'b',
+    x:'c',
+    w:'d'
+}
+function swapKeysAndValues(obj) {
+    const swapped = Object.entries(obj).map(
+        ([key, value]) => [value, key]
+    );
+
+    return Object.fromEntries(swapped);
+}
+
+console.log(swapKeysAndValues(input));
