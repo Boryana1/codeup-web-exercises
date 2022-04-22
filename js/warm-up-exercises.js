@@ -388,3 +388,52 @@ function swapKeysAndValues(obj) {
 }
 
 console.log(swapKeysAndValues(input));
+
+//21 APR 2022
+//// Write a function that takes an array of objects and a string as arguments
+// // Add a property with key 'continent' and value equal to the string to each of the objects
+// // Return the new array of objects
+// // Tipp: try not to mutate the original array
+//
+// example input: [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'
+// expected output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
+
+objectInput1 = [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }];
+stringInput1 = 'Asia';
+// function newObjArray(oneObj, oneString){
+//
+// }
+
+const arr = [{
+    a: 'foo'
+}, {
+    a: 'bar'
+}, {
+    a: 'baz'
+}]
+const mapped = objectInput1.map((element) => ({
+    ...element,
+    continent: 'Asia'
+}));
+console.log(mapped)
+
+//22 APR 2022
+
+// Write a function that takes an array (a) as argument
+// Extract the first 3 elements of a
+// Return the resulting array
+const oldArray = [1, 2, 3, 4, 5]
+const newArray = oldArray.slice(0, 3);
+console.log(newArray)
+
+// 2.  Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
+// A) add properties and values to the existing object
+// B) re-assign 2 properties’ values
+
+var cereal =  [{
+    Kelloggs: 'Fruit and yogurt'
+}, {
+    a: 'bar'
+}, {
+    a: 'baz'
+}]
