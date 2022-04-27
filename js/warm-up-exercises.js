@@ -437,3 +437,72 @@ var cereal =  [{
 }, {
     a: 'baz'
 }]
+
+
+
+
+//QUIZ
+var array = ['John', 'Paul', 'George', 'Ringo'];
+
+
+//
+//     array.unshift('Yoko');
+//
+//
+//
+// array.push('Yoko');
+//
+
+
+array.splice(array.indexOf('Ringo'), 0, 'Yoko');
+
+// I want to add a "genre" property on the "band" object. Which of the following will let me do this?
+//
+// var genre = "Metal";
+//
+// band.genre = "Metal";
+//
+// band['genre'] = "Metal";
+//
+// Both band.genre = "Metal"; and band['genre'] = "Metal";
+//
+// Explanation: Both of these make a property on the "band" object
+
+//25 APR 2022
+// Write a function that takes an array of numbers as argument and returns the number of negative values in the array
+// example Input: [1,-2,2,-4]
+// expected output: 2
+
+var myArray = [4, -5, 0, 2, -67, 8, 10, -34];
+
+function getNegativeNumbers(array) {
+    return array.filter(value => value < 0);
+}
+console.log(getNegativeNumbers(myArray));
+getNegativeNumbers(myArray).length
+
+// Write a function that takes two date instances as argument
+// It should return the number of days that lies between those dates
+
+// example input: new Date('2020-06-11'), new Date('2020-06-01')
+// expected output: 10
+
+
+
+// Write a function that takes an array (a) and a number (b) as arguments
+// Sum up all array elements with a value greater than b
+// Return the sum
+
+// example input: [1, 2, 3, 4, 5, 6, 7], 2
+// expected output: 25
+
+var alfa = [1, 2, 3, 4, 5, 6, 7];
+var beta = 2;
+function sumUp(a, b) {
+    if (a < b) {
+        array.reduce(function (a, b) {
+            return a + b;
+        }, 0);
+    }
+}
+sumUp(alfa, beta)
