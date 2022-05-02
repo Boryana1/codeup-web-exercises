@@ -438,9 +438,6 @@ var cereal =  [{
     a: 'baz'
 }]
 
-
-
-
 //QUIZ
 var array = ['John', 'Paul', 'George', 'Ringo'];
 
@@ -506,3 +503,13 @@ function sumUp(a, b) {
     }
 }
 sumUp(alfa, beta)
+
+
+// 2 MAY 2022
+//
+// Write a function that takes a string (a) as argument
+// Remove the first 3 characters of a
+// Return the result
+
+// example input:'abcdefg'
+// expected result: 'defg'
