@@ -14,4 +14,9 @@ $('#visibility').click(function(event) {
     });
 });
 
-console.log("This is js");
+$('document').ready(function() {
+    $('.highlighted').click(function(event) {
+        event.preventDefault();
+        $(this).toggleClass('highlighted');
+    });
+});
