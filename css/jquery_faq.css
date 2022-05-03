@@ -1,3 +1,6 @@
 .invisible {
     visibility: hidden;
 }
+.highlighted {
+    background-color: #FF0;
+}
