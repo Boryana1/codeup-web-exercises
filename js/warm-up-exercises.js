@@ -513,3 +513,11 @@ sumUp(alfa, beta)
 
 // example input:'abcdefg'
 // expected result: 'defg'
+
+
+//3 MAR 2022
+//// Write a function that takes an object (a) as argument
+// // Return an array with all object keys
+//
+// example input: {a:1,b:2,c:3}
+// expected output: ['a','b','c']
