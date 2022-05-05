@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
-$END$
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5hY29kZXVwIiwiYSI6ImNsMnFsY3JzeDAwb2Eza28xbzV6MWRrdnMifQ.DZ6LjV_-Hf983RfbiGZn3g';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.1050, 29.7384], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+        // var marker = new mapboxgl.Marker()
+        //     .setLngLat([-98.4916, 29.4260])
+        //     .addTo(map);
+
+    });
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.4916, 29.4260])
+        .addTo(map);
+    // var popup = new mapboxgl.Popup()
+    // .setLngLat([-98.489615, 29.426827])
+    // .setHTML("<p>Codeup Rocks!</p>")
+    // .addTo(map)
+    var alamoPopup = new mapboxgl.Popup()
+        .setHTML("<p>Remember The Alamo!</p>")
+
+    marker.setPopup(alamoPopup)
+</script>
+
 </body>
 </html>
