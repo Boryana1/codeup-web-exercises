@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+
 </head>
 <body>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
+
+
 
 <div id='map' style='width: 400px; height: 300px;'></div>
+<button id='zoom1' type="button">Zoom level 5</button>
+<button id='zoom2' type="button">Zoom level 15</button>
+<button id='zoom3' type="button">Zoom level 20</button>
+<script src="../js/jquery/jquery-2.2.4.js"></script>
+<!--    GEOCODER PLUG IN  -->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+<!--    END GEOCODER PLUG IN-->
+<script src="../js/mapbox-geocoder-utils.js"></script>
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5hY29kZXVwIiwiYSI6ImNsMnFsY3JzeDAwb2Eza28xbzV6MWRrdnMifQ.DZ6LjV_-Hf983RfbiGZn3g';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5hY29kZXVwIiwiYSI6ImNsMnRpaHN3ZzAwcnEzZWxtanF5cmVyZ3EifQ.CCt2f4AoMgcT8J6gJGWKYw';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
@@ -32,6 +48,107 @@
         .setHTML("<p>Remember The Alamo!</p>")
 
     marker.setPopup(alamoPopup)
+    function animateMarker(timestamp) {
+        const radius = 20;
+
+        /*
+        Update the data to a new position
+        based on the animation timestamp.
+        The divisor in the expression `timestamp / 1000`
+        controls the animation speed.
+        */
+        marker.setLngLat([-98.4916, 29.4260],[-93.4916, 20.4260])
+            // Math.cos(timestamp / 1000) * radius,
+            // Math.sin(timestamp / 1000) * radius
+        // ]);
+
+        /*
+        Ensure the marker is added to the map.
+        This is safe to call if it's already added.
+        */
+        marker.addTo(map);
+
+// Request the next frame of the animation.
+        requestAnimationFrame(animateMarker);
+    }
+
+    // Start the animation.
+    requestAnimationFrame(animateMarker);
+    // marker.setAnimation(map.Animation.bounce);
+
+    // marker.setAnimation(null);
+
+    // Gristmill River Restaurant & Bar
+    // var rest1 = new mapboxgl.Marker()
+    //     .setLngLat([-98.1050, 29.7384])
+    //     .addTo(map);
+    // // var popup = new mapboxgl.Popup()
+    // // .setLngLat([-98.489615, 29.426827])
+    // // .setHTML("<p>Codeup Rocks!</p>")
+    // // .addTo(map)
+    // var rest1Popup = new mapboxgl.Popup()
+    //     .setHTML("<p>Gristmill River Restaurant & Bar</p>"+
+    //     '<img style="width: 100%" src="../source/restaurant1.jpeg">'
+    //     )
+
+    // rest1.setPopup(rest1Popup)
+
+
+    //RESTAURANTS:
+
+    var favRest = [
+        {
+            name: "Gristmill River Restaurant & Bar",
+            address: "1287 Gruene Rd, New Braunfels, TX 78130",
+            coordinates: {
+                lng: -98.1050,
+                lat: 29.7384,
+            },
+            img: "../source/restaurant1.jpeg"
+        },
+        {
+            name: "Thai Cafe - Thai & Seafood Cuisine",
+            address: "109 W Central Ave, Temple, TX 76501",
+            coordinates: {
+                lng: -97.34280666137711,
+                lat: 31.097678483009442,
+            },
+            img: "../source/thai-rest.jpeg"
+        },
+        {
+            name: "Blue Corn Harvest Bar & Grill",
+            address: "212 W 7th St #105, Georgetown, TX 78626",
+            coordinates: {
+                lng: -97.67870762661282,
+                lat: 30.63769086383153,
+            },
+            img: "../source/restaurant3.jpeg"
+        }
+    ]
+
+    favRest.forEAch
+
+    // GEOCODER
+
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        })
+    );
+
+//    ZOOM IN:
+    map.addControl(new mapboxgl.NavigationControl());
+
+    $('#zoom1').click(function(){
+        map.setZoom(5);
+    });
+    $('#zoom2').click(function(){
+        map.zoomTo(15)
+    });
+    $('#zoom3').click(function(){
+        map.flyTo({zoom:20})
+    });
 </script>
 
 </body>
