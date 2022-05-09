@@ -515,9 +515,32 @@ sumUp(alfa, beta)
 // expected result: 'defg'
 
 
-//3 MAR 2022
+//3 MAR 2022 DONE
 //// Write a function that takes an object (a) as argument
 // // Return an array with all object keys
 //
 // example input: {a:1,b:2,c:3}
 // expected output: ['a','b','c']
+var input = {a:1,b:2,c:3};
+// var arrNew = []
+function getOutput (a) {
+    var arrNew = []
+    for (var element in input) {
+        arrNew.push(element);
+    }
+    return arrNew
+}
+
+getOutput(input)
+// var input = [1, 2, 3];
+// var keys = Object.keys(foo);
+// console.log(keys)
+
+var input = [1, 2, 3];
+function getSum (a) {
+    var start = 1
+    for (var i = 0; i < input.length; i++) {
+        start *= input[i]
+    }
+    console.log(start)
+}
