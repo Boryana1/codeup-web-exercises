@@ -58,12 +58,15 @@
 
 //     Use .filter to create an array of user objects where each user object has at least
 //     3 languages in the languages array.
-var usersWith3Lang = users.filter( (lang) => {
-    for (let i = 0; i < users.length; i++) {
-        //     if (users[i].languages.length == 3) {
-        //         console.log(users[i])
-        //     }
-        // }
-        return users[i].languages.length === 3
-    }
-});
+    users.filter( (lang) => {
+        var usersWith3Lang = [];
+        for (let i = 0; i < users.length; i++) {
+            console.log(users[i].languages);
+            if (users[i].languages.length == 3) {
+                // console.log(users[i])
+                usersWith3Lang.push(users[i])
+            }
+        }
+        // return usersWith3Lang
+        // return users[i].languages.length === 3
+    });
