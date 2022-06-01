@@ -33,6 +33,7 @@ function getLastCommitDate(user) {
     myPromise.then(response => {
         response.json().then(event => {
             let box = [];
+            box[0].created_at = 0;
             event.forEach(function(what){
                 if (what.type === 'PushEvent'){
                     box.push(what);
