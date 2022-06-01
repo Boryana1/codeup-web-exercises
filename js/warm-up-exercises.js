@@ -539,8 +539,157 @@ getOutput(input)
 var input = [1, 2, 3];
 function getSum (a) {
     var start = 1
-    for (var i = 0; i < input.length; i++) {
-        start *= input[i]
+    for (var i = 0; i < a.length; i++) {
+        start *= a[i]
     }
     console.log(start)
 }
+getSum(input)
+
+//From 3rd JS assignment:
+
+var stringName = "harry potter" //var arr= ["Harry", "Potter"];
+function capitalizeName(str) {
+// split the string into separate words (the result of the splitting is an array with all the words as separate elements)
+    var arr = str.split(" ");
+// iterating through the array of words
+    for (var i = 0; i < arr.length; i++) {
+// reassigning new value to the current element. The new value is the first letter of the word in upper case concatenated with the rest of the word(from the second letter to the end of the word)
+        console.log(arr[i]);
+        console.log(arr[i].slice(1))
+
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        console.log(arr[i]);
+        console.log(arr[i].slice(1))
+    }
+// aggregate all the new uppercased words from the array with spaces between each word (the result of the aggregation is a string)
+    const str2 = arr.join(" ");
+    return str2;
+};
+capitalizeName(stringName)
+
+// 7. Write a function named `averageSales` that accepts an array of objects where
+// each object represents a person, and has a `sales` property. The function
+// should return the average of every object's `sales` property.
+//     ```js
+//    averageSales([
+//        {name: 'Jim Halpert', sales: 100},
+//        {name: 'Dwight Schrute', sales: 50},
+//        {name: 'Andy Bernard', sales: 150},
+//    ])
+//    // 100
+//    ```
+var sales = [
+    {name: 'Jim Halpert', sales: 100},
+    {name: 'Dwight Schrute', sales: 50},
+    {name: 'Andy Bernard', sales: 150},
+]
+
+function average(x){
+    var newArray = 0;
+    for (var i = 0; i < x.length; i += 1) {
+        newArray += x[i];
+        // console.log(newArray);
+    }
+    var arrLength = x.length;
+    console.log(newArray)
+    return newArray / arrLength;
+}
+average([1, 2, 3]);
+
+function averageSales(x){
+    var newArray = 0;
+    for (var i = 0; i < x.length; i += 1) {
+        newArray += x[i].sales;
+    }
+    var arrLength = x.length;
+    console.log(newArray);
+    return newArray / arrLength;
+}
+averageSales(sales);
+
+function averageSales2 (x){
+    var arrayOfSales = 0;
+    for (let i = 0; i < sales.length; i++) {
+        arrayOfSales += x[i].sales;
+        // console.log(x[i].sales);
+    }
+    return arrayOfSales;
+}
+averageSales2(sales)
+
+function averageSales3 (x){
+    var arrayOfSales = [];
+    for (let i = 0; i < sales.length; i++) {
+        arrayOfSales.push(x[i].sales);
+        // console.log(x[i].sales);
+    }
+    return average(arrayOfSales);
+}
+
+averageSales3(sales)
+
+function average(x){
+    var newArray = 0;
+    for (var i = 0; i < x.length; i += 1) {
+        newArray += x[i];
+        // console.log(newArray);
+    }
+    var arrLength = x.length;
+    // console.log(newArray)
+    return newArray / arrLength;
+}
+average([1, 2, 3]);
+var sales = [
+    {name: 'Jim Halpert', sales: 100},
+    {name: 'Dwight Schrute', sales: 50},
+    {name: 'Andy Bernard', sales: 150},
+]
+function averageSales4(arrayOfPeople) {
+    var arrayOfSales = arrayOfPeople.map((element) => {
+        return element.sales
+    })
+    return average(arrayOfSales);
+}
+averageSales4(sales)
+
+function countVowels(str) {
+    var vowelsCount = 0;
+    for (var i = 0; i < str.length; i++) {
+        if ('aeiou'.includes(str[i].toLowerCase())) {
+            vowelsCount += 1;
+        }
+    }
+    return vowelsCount;
+}
+
+countVowels('Hello, Codeup!');
+
+function analyzeWord(x){
+    // var Obj = {};
+    // Obj.word = x;
+    // Obj.numberOfLetters = x.length;
+    // Obj.numberOfVowels = countVowels(x);
+    return {
+        word: x,
+        numberOfLetters: x.length,
+        numberOfVowels: countVowels(x)
+    };
+}
+analyzeWord('codeup');
+
+
+function remove9s(x){
+    var newArray = [];
+    for (var i = 0; i < x.length; i += 1) {
+        if (x[i] !== 9) {
+            newArray.push(x[i]);
+        }
+    }
+    return newArray;
+}
+var remove9s = ([7, 8, 9, 10]);
+
+var filter9s = remove9s.filter((n)=> {
+    return n !== 9
+})
