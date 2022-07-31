@@ -140,6 +140,7 @@ pickANumber();
      return string.split(separator).reverse().join(separator);
  }
 
+ // Given two strings, return true if they are anagrams of one another
 
 
 
