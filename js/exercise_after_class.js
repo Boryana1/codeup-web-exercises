@@ -209,3 +209,28 @@ pickANumber();
      largest = arr[i]>largest ? arr[i]:largest; //Check largest number
  }
  console.log(largest)
+
+
+
+ var arr = [[0,1,1],[0,1,0],[1,0,0]];
+ var zeroCount = 0;
+ for(var i=0;i<arr.length;i++){
+     for(var j=0;j<arr[0].length;j++){
+         zeroCount = arr[i][j]==0 ? zeroCount+1 : zeroCount;
+     }
+ }
+
+ console.log(zeroCount)
+
+
+ function findProd(arr1, arr2) {
+     var arrProd = arr1.length>arr2.length ? arr1 : arr2;
+     for(var i=0; i < Math.min(arr1.length, arr2.length); i++){
+         arrProd[i] = arr1[i] * arr2[i]; //Product of 2 array elements
+     }
+     return arrProd;
+ }
+ var arr1 = [3,45,23,78,34];
+ var arr2 = [4,2,34,4,12,1];
+
+ console.log(findProd(arr1,arr2));
