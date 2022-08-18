@@ -234,3 +234,30 @@ pickANumber();
  var arr2 = [4,2,34,4,12,1];
 
  console.log(findProd(arr1,arr2));
+
+ function createBase(baseNumber) {
+     return function(N) {
+         return baseNumber + N;
+     }
+ }
+
+ var addSix = createBase(6);
+ addSix(10);
+ addSix(21);
+
+ var firstWord = "Mary";
+ var secondWord = "Army";
+
+ isAnagram(firstWord, secondWord); // true
+
+ function isAnagram(first, second) {
+     // For case insensitivity, change both words to lowercase.
+     var a = first.toLowerCase();
+     var b = second.toLowerCase();
+
+     // Sort the strings, and join the resulting array to a string. Compare the results
+     a = a.split("").sort().join("");
+     b = b.split("").sort().join("");
+
+     return a === b;
+ }
