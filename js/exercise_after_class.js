@@ -234,3 +234,13 @@ pickANumber();
  var arr2 = [4,2,34,4,12,1];
 
  console.log(findProd(arr1,arr2));
+
+ function createBase(baseNumber) {
+     return function(N) {
+         return baseNumber + N;
+     }
+ }
+
+ var addSix = createBase(6);
+ addSix(10);
+ addSix(21);
